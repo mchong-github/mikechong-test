@@ -14,6 +14,6 @@ hashi-up nomad install --ssh-target-addr $SERVER03 --ssh-target-user $NOMADUSER 
 hashi-up nomad install --ssh-target-addr $CLIENT01 --ssh-target-user $NOMADUSER --client --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
 hashi-up nomad install --ssh-target-addr $CLIENT02 --ssh-target-user $NOMADUSER --client --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
 hashi-up nomad install --ssh-target-addr $CLIENT03 --ssh-target-user $NOMADUSER --client --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
-hashi-up consul uninstall --ssh-target-addr $CLIENT01 --ssh-target-user $NOMADUSER --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
-hashi-up consul uninstall --ssh-target-addr $CLIENT02 --ssh-target-user $NOMADUSER --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
-hashi-up consul uninstall --ssh-target-addr $CLIENT03 --ssh-target-user $NOMADUSER --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
+hashi-up consul install --ssh-target-addr $CLIENT01 --ssh-target-user $NOMADUSER --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
+hashi-up consul install --ssh-target-addr $CLIENT02 --ssh-target-user $NOMADUSER --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
+hashi-up consul install --ssh-target-addr $CLIENT03 --ssh-target-user $NOMADUSER --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03

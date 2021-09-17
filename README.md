@@ -1,5 +1,8 @@
 # mikechong-test
-for devops-homework
+
+## Single-Node
 
 deploy-nomad.sh		# ha nomad cluster
 
+
+## HA-Cluster
