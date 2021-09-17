@@ -51,7 +51,7 @@ NOTE: I'm sure there are more can be done, but this is far as I got to deploy th
 
   - CD
 > For CD, a git repo can be utilized to integrate and store large amount of "jobs" to be scheduled in the cluster. 
-> Then, each repo/branch can be setup with an automatic trigger(ie. git commit) in the event of new code has been added to deploy into the desired environment
+> Then, each repo/branch can be setup with an automatic trigger(ie. git commit) in the event of updated code to be deployed into the desired environment
 
   - Evaluation Criteria
 > Since this exercise was to deploy Nomad(from Hashicorp), I looked into few tools from Hashicorp and found 'hashi-up" tool to get things started.
