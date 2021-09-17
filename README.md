@@ -27,6 +27,9 @@ to redeploy job, modify the jobs file and run
 
 >$ sh redeploy-job-in-ha.sh
 
+<br>
+<br>
+<br>
 
 # 2) Build Docker files for both sample applications (applications must return correct results).
 
@@ -39,6 +42,9 @@ to redeploy job, modify the jobs file and run
 > I'm not sure where or how to setup the Authorization of "mytoken" token.
 > curl for "/hello" did return success.
 
+<br>
+<br>
+<br>
 
 # 3) Build a deployment mechanism for Nomad's [docker driver](https://www.nomadproject.io/docs/drivers/docker), this should include basic .hcl files for both applications.
 
@@ -46,6 +52,9 @@ NOTE: I'm sure there are more can be done, but this is far as I got to deploy th
 
 > jobs/apps.hcl
 
+<br>
+<br>
+<br>
 
 # 4) Brainstorm a plan for continuous delivery for Nomad, discuss the specific tools you'd look at and your evaluation criteria for them.
 
@@ -56,3 +65,7 @@ NOTE: I'm sure there are more can be done, but this is far as I got to deploy th
   - Evaluation Criteria
 > Since this exercise was to deploy Nomad(from Hashicorp), I looked form tools that can integrate well and found 'hashi-up" tool to get things started.
 > I also researched into other  tools from Hashicorp, which could be used to complement this deployment (i.e  Consul, Vault, Terraform). 
+
+<br>
+<br>
+<br>
