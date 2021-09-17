@@ -42,7 +42,7 @@ to redeploy job, modify the jobs file and run
 
 # 3) Build a deployment mechanism for Nomad's [docker driver](https://www.nomadproject.io/docs/drivers/docker), this should include basic .hcl files for both applications.
 
-NOTE: for being a first timer with Nomad, I was able to deploy and config traffic into the containers. 
+NOTE: I'm sure there are more can be done, but this is far as I got to deploy the services and setup traffic into the containers. 
 
 > jobs/apps.hcl
 
@@ -50,7 +50,7 @@ NOTE: for being a first timer with Nomad, I was able to deploy and config traffi
 # 4) Brainstorm a plan for continuous delivery for Nomad, discuss the specific tools you'd look at and your evaluation criteria for them.
 
   - CD
-> For CD, a git repo can be utilized to integrate the large amount of "jobs" to be scheduled in the cluster. 
+> For CD, a git repo can be utilized to integrate and store large amount of "jobs" to be scheduled in the cluster. 
 > Then, each repo/branch can be setup with an automatic trigger(ie. git commit) in the event of new code has been added to deploy into the desired environment
 
   - Evaluation Criteria
