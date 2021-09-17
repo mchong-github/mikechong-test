@@ -1,5 +1,5 @@
 
-#- Build a small Nomad test cluster either locally or or in the cloud, single node is fine.
+# 1) Build a small Nomad test cluster either locally or or in the cloud, single node is fine.
 
 ### Single-Node Test
 run single-node test nomad
@@ -24,18 +24,18 @@ to redeploy job, modify the jobs file and run
 >$ sh redeploy-job-in-ha.sh
 
 
-#- Build Docker files for both sample applications (applications must return correct results).
+# 2) Build Docker files for both sample applications (applications must return correct results).
 
 > Dockerfiles.app_a
 
 > Dockerfiles.app_b
 
 
-#- Build a deployment mechanism for Nomad's [docker driver](https://www.nomadproject.io/docs/drivers/docker), this should include basic .hcl files for both applications.
+# 3) Build a deployment mechanism for Nomad's [docker driver](https://www.nomadproject.io/docs/drivers/docker), this should include basic .hcl files for both applications.
 
 > jobs/apps.hcl
 
 
-#- Brainstorm a plan for continuous delivery for Nomad, discuss the specific tools you'd look at and your evaluation criteria for them.
+# 4) Brainstorm a plan for continuous delivery for Nomad, discuss the specific tools you'd look at and your evaluation criteria for them.
 
 > use github for code repository
