@@ -17,3 +17,8 @@ hashi-up nomad install --ssh-target-addr $CLIENT03 --ssh-target-user $NOMADUSER 
 hashi-up consul install --ssh-target-addr $CLIENT01 --ssh-target-user $NOMADUSER --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
 hashi-up consul install --ssh-target-addr $CLIENT02 --ssh-target-user $NOMADUSER --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
 hashi-up consul install --ssh-target-addr $CLIENT03 --ssh-target-user $NOMADUSER --retry-join $SERVER01 --retry-join $SERVER02 --retry-join $SERVER03
+
+sleep 10
+
+nomad job run -address=http://192.168.1.41:4646 jobs/apps.hcl
+
