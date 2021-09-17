@@ -1,7 +1,7 @@
 
 # 1) Build a small Nomad test cluster either locally or or in the cloud, single node is fine.
 
-- NOTE: my first time using the Nomad. 
+- NOTE: my first time using Nomad. 
 
 ### Single-Node Test
 
@@ -34,12 +34,15 @@ to redeploy job, modify the jobs file and run
 
 > Dockerfiles.app_b
 
-- images were upload to my Docker Hub account
+- Images were upload to my Docker Hub account
+- I was not able to figure out the "flask" app to reture successfully for this call, "curl -X POST -H 'Authorization: mytoken' http://127.0.0.1:5000/jobs"
+- I'm not sure where or how to setup the Authorization of "mytoken" token.
+- curl for "/hello" did return success.
 
 
 # 3) Build a deployment mechanism for Nomad's [docker driver](https://www.nomadproject.io/docs/drivers/docker), this should include basic .hcl files for both applications.
 
-NOTE: being a first timer with Nomad, I was able to deploy and config traffic into the containers. 
+NOTE: for being a first timer with Nomad, I was able to deploy and config traffic into the containers. 
 
 > jobs/apps.hcl
 
