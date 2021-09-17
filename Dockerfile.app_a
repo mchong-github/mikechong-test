@@ -6,6 +6,5 @@ COPY ./app_a.py /apps/app_a.py
 COPY ./schema.sql /apps/schema.sql
 COPY ./requirements.txt /apps/requirements.txt
 RUN pip3 install -r /apps/requirements.txt
-RUN sqlite3 /apps/database.db < /apps/schema.sql
 EXPOSE 5000
 CMD ["/usr/bin/python3", "/apps/app_a.py"]

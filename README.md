@@ -70,6 +70,3 @@ NOTE: I'm sure there are more can be done, but this is far as I got to deploy th
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
