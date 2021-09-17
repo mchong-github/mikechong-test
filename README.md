@@ -54,5 +54,5 @@ NOTE: I'm sure there are more can be done, but this is far as I got to deploy th
 > Then, each repo/branch can be setup with an automatic trigger(ie. git commit) in the event of updated code to be deployed into the desired environment
 
   - Evaluation Criteria
-> Since this exercise was to deploy Nomad(from Hashicorp), I looked into few tools from Hashicorp and found 'hashi-up" tool to get things started.
-> Additional tools from Hashicorp could be used to complement this deployment (i.e  Consul, Vault, Terraform). 
+> Since this exercise was to deploy Nomad(from Hashicorp), I looked form tools that can integrate well and found 'hashi-up" tool to get things started.
+> I also researched into other  tools from Hashicorp, which could be used to complement this deployment (i.e  Consul, Vault, Terraform). 
