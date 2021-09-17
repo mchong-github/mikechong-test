@@ -2,8 +2,10 @@
 
 
 ## Single-Node Dev
->$ sh deploy-nomad-dev.sh  
+>$ sh deploy-nomad-dev.sh 
+ 
 to redeploy job, modify the jobs file and run
+
 >$ sh redeploy-job-in-dev 
 
 $ sh redeploy
