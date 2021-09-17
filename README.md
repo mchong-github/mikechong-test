@@ -1,8 +1,7 @@
 # mikechong-test
 
-## Single-Node
+## Single-Node Dev
 
-deploy-nomad.sh		# ha nomad cluster
-
+sh deploy-nomad-dev.sh
 
 ## HA-Cluster
