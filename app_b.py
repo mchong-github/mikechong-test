@@ -7,7 +7,7 @@ application = Flask(__name__)
 def auth():
     try:
         token = request.form['token']
-        con = sql.connect("database.db")
+        con = sql.connect("/apps/database.db")
         cur = con.cursor()
         cur.execute(
             "SELECT username from users where token = (?) LIMIT 1",
@@ -16,6 +16,7 @@ def auth():
         con.close()
         return username
     except:
+        return username
         return 'fail'
 
 

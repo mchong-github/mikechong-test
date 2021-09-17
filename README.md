@@ -33,11 +33,12 @@ to redeploy job, modify the jobs file and run
 
 # 2) Build Docker files for both sample applications (applications must return correct results).
 
+- Images were built then upload to my Docker Hub account
+
 > Dockerfiles.app_a
 
 > Dockerfiles.app_b
 
-- Images were upload to my Docker Hub account
 > I was not able to figure out why "flask" app was failing for "curl -X POST -H 'Authorization: mytoken' http://127.0.0.1:5000/jobs".
 > I'm not sure where or how to setup the Authorization of "mytoken" token.
 > curl for "/hello" did return success.
@@ -66,6 +67,9 @@ NOTE: I'm sure there are more can be done, but this is far as I got to deploy th
 > Since this exercise was to deploy Nomad(from Hashicorp), I looked form tools that can integrate well and found 'hashi-up" tool to get things started.
 > I also researched into other  tools from Hashicorp, which could be used to complement this deployment (i.e  Consul, Vault, Terraform). 
 
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
