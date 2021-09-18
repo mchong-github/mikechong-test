@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 if [[ -z $(ps -ef | grep 'nomad agent' | grep -v 'grep') ]] ; then
   nomad agent -dev &
   sleep 10
