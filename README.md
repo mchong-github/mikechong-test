@@ -7,11 +7,11 @@
 
 run single-node test nomad
 
->$ sh deploy-nomad-dev.sh 
+>$ ./scripts/deploy-nomad-dev.sh 
  
 to redeploy job, modify the jobs file and run
 
->$ sh redeploy-job-in-dev.sh
+>$ ./scripts/run-job-in-dev.sh
 
 
 ### HA-Cluster
@@ -21,11 +21,11 @@ to redeploy job, modify the jobs file and run
 
 run ha-cluster nomad
 
->$ sh deploy-nomad-ha-cluster.sh 
+>$ ./scripts/deploy-nomad-ha-cluster.sh 
 
 to redeploy job, modify the jobs file and run
 
->$ sh redeploy-job-in-ha.sh
+>$ ./scripts/run-job-in-ha.sh
 
 <br>
 <br>
@@ -61,13 +61,13 @@ NOTE: I'm sure there are more can be done, but this is far as I got to deploy th
 
   - CD
 > For CD, a git repo can be utilized to integrate and store large amount of "jobs" to be scheduled in the cluster. 
-> Then, each repo/branch can be setup with an automatic trigger(ie. git commit) in the event of updated job/code to be deployed into the desired environment
+> Then, each repo/branch can be setup with an automatic trigger(ie. git commit) or time scheduled in the event of updated job/code to be deployed into the desired environment.
+> For production, stages to perform tests(ex: unit/stress/load/etc tests) prior to going live is highly recommended.
 
   - Evaluation Criteria
 > Since this exercise was to deploy Nomad(from Hashicorp), I looked for tools that can be integrated well.
 > I used 'hashi-up" for my cluster builds.
 > I also researched into other tools from Hashicorp, which could be used to complement this deployment (i.e  Consul, Vault, Terraform). 
-> 
 
 <br>
 <br>

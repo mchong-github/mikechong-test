@@ -7,6 +7,7 @@ application = Flask(__name__)
 def auth():
     try:
         token = request.form['token']
+#        con = sql.connect("database.db")
         con = sql.connect("/apps/database.db")
         cur = con.cursor()
         cur.execute(
