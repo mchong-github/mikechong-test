@@ -1,7 +1,8 @@
 
 # 1) Build a small Nomad test cluster either locally or or in the cloud, single node is fine.
 
-- NOTE: my first time using Nomad. 
+- NOTE: This is my first time using Nomad. 
+
 
 ### Single-Node Test
 
