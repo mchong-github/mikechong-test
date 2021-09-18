@@ -20,5 +20,5 @@ hashi-up consul install --ssh-target-addr $CLIENT03 --ssh-target-user $NOMADUSER
 
 sleep 10
 
-nomad job run -address=http://192.168.1.41:4646 jobs/apps.hcl
+#nomad job run -address=http://192.168.1.41:4646 jobs/apps.hcl
 
