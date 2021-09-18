@@ -40,10 +40,9 @@ to redeploy job, modify the jobs file and run
 
 > Dockerfiles.app_b
 
-> I was not able to figure out why "flask" app was failing for "curl -X POST -H 'Authorization: mytoken' http://127.0.0.1:5000/jobs".
+> I was not able to fix the 500 error returning from "curl -X POST -H 'Authorization: mytoken' http://127.0.0.1:5000/jobs".
+> I tried modifying the database.db path in app_b.py and have containers in one group but still failed.
 > I saw the "mytoken" data in the "schema.sql" which was used to create "database.db".
-> I did modify the database.db path in app_b.py code but still failed.
-> I'm not sure where or how to fix the Authorization of "mytoken" token in flask.
 > curl for "/hello" did return success.
 
 <br>
