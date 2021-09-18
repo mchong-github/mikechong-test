@@ -1,31 +1,40 @@
 job "run-apps" {
   datacenters = ["dc1"]
 
-  group "apps" {
+  group "app-a" {
     count = 1
     service {
       port = "5000"
     }
     network {
-      port "ahttp" {
+      port "http" {
         static = 5000
-      }
-      port "bhttp" {
-        static = 5001
       }
     }
     task "a" {
       driver = "docker"
       config {
         image = "orious/app-a-image"
-        ports = ["ahttp"]
+        ports = ["http"]
+      }
+    }
+  }
+	
+  group "app-b" {
+    count = 1
+    service {
+      port = "5001"
+    }
+    network {
+      port "http" {
+        static = 5001
       }
     }
     task "b" {
       driver = "docker"
       config {
         image = "orious/app-b-image"
-        ports = ["bhttp"]
+        ports = ["http"]
       }
     }
   }
