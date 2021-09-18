@@ -40,7 +40,9 @@ to redeploy job, modify the jobs file and run
 > Dockerfiles.app_b
 
 > I was not able to figure out why "flask" app was failing for "curl -X POST -H 'Authorization: mytoken' http://127.0.0.1:5000/jobs".
-> I saw the "mytoken" data in schema.sql which was used to create "database.db", but I'm not sure where or how to fix the Authorization of "mytoken" token in flask.
+> I saw the "mytoken" data in the "schema.sql" which was used to create "database.db".
+> I did modify the database.db path in app_b.py code but still failed.
+> I'm not sure where or how to fix the Authorization of "mytoken" token in flask.
 > curl for "/hello" did return success.
 
 <br>
@@ -60,13 +62,13 @@ NOTE: I'm sure there are more can be done, but this is far as I got to deploy th
 # 4) Brainstorm a plan for continuous delivery for Nomad, discuss the specific tools you'd look at and your evaluation criteria for them.
 
   - CD
-> For CD, a git repo can be utilized to integrate and store large amount of "jobs" to be scheduled in the cluster. 
+> For CD, a git repo can be utilized to integrate and store large amount of jobs, dockerfiles and other scripts to be build the cluster and/or deploy the software.
 > Then, each repo/branch can be setup with an automatic trigger(ie. git commit) or time scheduled in the event of updated job/code to be deployed into the desired environment.
 > For production, stages to perform tests(ex: unit/stress/load/etc tests) prior to going live is highly recommended.
 
   - Evaluation Criteria
-> Since this exercise was to deploy Nomad(from Hashicorp), I looked for tools that can be integrated well.
-> I used 'hashi-up" for my cluster builds.
+> Since this exercise was to deploy Nomad(from Hashicorp), I looked for tools that can be integrated well with Nomad.
+> I used 'hashi-up" for my cluster builds which is easiest tool I've ever used to build a cluster. 
 > I also researched into other tools from Hashicorp, which could be used to complement this deployment (i.e  Consul, Vault, Terraform). 
 
 <br>
@@ -77,9 +79,9 @@ NOTE: I'm sure there are more can be done, but this is far as I got to deploy th
 
 # 5) Brief discussion of Nomad as a container platform - note strengths and weaknesses vs more common options (e.g. Kubernetes)
 
-> I think the biggest strength of Nomad was how easy and fast it was to build a HA cluster.  
-> However, I found that the workflow required jugling with many tools from Hashicorp, which I think may become harder to maintain/manages as infrastructure grows.
-> I do see Nomad being viable for production use and I'd like to work with and evaluate "Nomad vs Kubernetes" more in the future to determine which technology may be a best fit for various environment.
+> I think the biggest strength of Nomad was how easy and fast it is to build a HA cluster.  
+> For weakness, I found that the workflow required jugling with many tools from Hashicorp, which I think may become harder to maintain/manages as infrastructure grows.
+> However, I do see Nomad being viable for production use and I'd like to work with and evaluate "Nomad vs Kubernetes" more in the future to determine which technology may be a best fit for various environment.
 
 
 <br>
